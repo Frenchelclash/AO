@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Aesthetic Objects</title>
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<a href="index.html" class="logo"></a>
+			<nav class="header__menu">
+				<ul class="header__menu-links">
+				   <li><a href="catalog.html">каталог</a></li>
+				   <li><a href="blog.html">блог</a></li>
+				   <li><a href="contacts.html">контакты</a></li>
+				</ul>
+				<a href="" class="cart">
+				    <span class="cart__counter">1</span>
+				</a> 
+				<div class="menu-button"></div>
+			</nav>
+		</header>
+		<main class="contacts-main">
+			<section class="contact-details-section">
+				<h1 class="contact-details__heading heading__h1">Контакты</h1>
+				<div class="contact-details">
+					<a class="contact-details__tel" href="tel:+7 (968) 188 58 35">Телефон для связи: +7 (968) 188-58-35</a>
+					<a class="contact-details__email" href="mailto:info@aestheticobjects.com">Почта: info@aestheticobjects.com</a>
+			        <span class="contact-details__adress">Адрес:</span>
+			        <span class="contact-details__social-networks-span">Наши соц. сети:</span>
+			        <div class="contact-details__social-networks">
+			    	   <!--<a href=""><img class="contact-details__social-networks-YT" src="img/YTG.png" alt="icon"></a>-->
+    	               <a href="https://t.me/aesthitic_objects"><img class="contact-details__social-networks-TG" src="img/TGG.png" alt="icon"></a>
+    	               <a href="https://www.instagram.com/aesthetic_objcts/"><img class="contact-details__social-networks-IG" src="img/IGG.png" alt="icon"></a>
+    	               <a href=" https://web.facebook.com/groups/741611413089502"><img class="contact-details__social-networks-FB" src="img/FBG.png" alt="icon"></a>
+			        </div>
+				</div>
+			</section>
+			<form action="" class="feedback-form">
+					<fieldset class="feedback-form__personal-data">
+						<div class="feedback-form__input-wrapper input-wrapper">
+					        <label class="feedbak-form__label label" for="fio">ФИО</label>
+					        <input class="feedback-form__input input" type="text" name="fio" placeholder="Иван Иванов">
+					    </div>
+					    <div class="feedback-form__input-wrapper input-wrapper">
+					        <label  class="feedbak-form__label label" for="phone_number">Телефон</label>
+					        <input class="feedback-form__input input" type="tel" name="phone_number" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                placeholder="+7(___)___-__-__">
+					    </div>
+					    <div class="feedback-form__input-wrapper input-wrapper">
+					       <label class="feedbak-form__label label" for="email">Почта</label>
+					       <input class="feedback-form__input input" type="email" name="email" placeholder=" Ivanov2000@mail.ru">
+					    </div>
+					</fieldset>
+					<fieldset class="feedback-form__textarea">
+					    <div class="feedback-form__input-wrapper__textarea input-wrapper">
+						    <label class="feedbak-form__label label" for="message">Комментарий</label>
+				            <textarea class="feedback-form__textarea textarea" name="message"></textarea>
+					    </div>
+					</fieldset>	
+			</form>
+			<div class="submit-section">
+				    <input  class="submit-section__submit-input"type="submit" value="Отправить">
+		        	<fieldset class="checkbox-section">
+		        		    <input  class="checkbox-section__checkbox" type="checkbox" required>
+		        		    <p  class="checkbox-section__checkbox-p">Я соглашаюсь с условиями обработки и использования моих персональных данных</p>
+		        	</fieldset>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<nav class="footer__menu">
+				<ul class="footer__menu-links">
+				  <li><a href="catalog.html">каталог</a></li>
+				   <li><a href="blog.html">блог</a></li>
+				   <li><a href="contacts.html">контакты</a></li>
+				</ul>
+			</nav>
+			<div class="footer__right-side">
+				<span class="footer__copyright">Aesthetic objects 2020</span>
+				<div class="footer__social-networks">
+					<!--<a href=""><img class="YT" src="img/YTG.png" alt="icon"></a>-->
+    	            <a href="https://t.me/aesthitic_objects"><img class="footer__social-networks-TG" src="img/TG.png" alt="icon"></a>
+    	            <a href="https://www.instagram.com/aesthetic_objcts/"><img class="footer__social-networks-IG" src="img/IG.png" alt="icon"></a>
+    	            <a href=" https://web.facebook.com/groups/741611413089502"><img class="footer__social-networks-FB" src="img/FB.png" alt="icon"></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="hp_js/script.js"></script>
+</body>
+</html>
