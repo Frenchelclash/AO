@@ -17,13 +17,38 @@
 				   <li><a href="blog.html">блог</a></li>
 				   <li><a href="contacts.html">контакты</a></li>
 				</ul>
-				<a class="cart  open-cart">
+				<div class="cart open-cart">
 				    <span class="cart__counter">1</span>
-				</a> 
-				<div class="menu-button"></div>
+				</div>  
+				<div class="menu-button open-menu"></div>
 			</nav>
 		</header>
 		<main class="main">
+			<div class="menu-page">
+				<div class="header">
+			       <a href="index.html" class="logo"></a>
+			       <div class="header__menu">
+				      <a class="cart  open-cart">
+				        <span class="cart__counter">1</span>
+				      </a> 
+				      <div class="menu-button close-menu"></div>
+			        </div>
+		        </div>
+				<nav class="menu-page__menu">
+				  <ul class="menu-page__menu-links">
+				     <li><a href="catalog.html">каталог</a></li>
+				     <li><a href="blog.html">блог</a></li>
+				      <li><a href="contacts.html">контакты</a></li>
+				      <li class="menu-page__social-networks">
+					      <!--<a href=""><img class="YT" src="img/YTG.png" alt="icon"></a>-->
+    	                  <a href="https://t.me/aesthitic_objects"><img class="menu-page__social-networks-TG" src="img/TG.png" alt="icon"></a>
+    	                   <a href="https://www.instagram.com/aesthetic_objcts/"><img class="menu-page__social-networks-IG" src="img/IG.png" alt="icon"></a>
+    	                   <a href=" https://web.facebook.com/groups/741611413089502"><img class="menu-page__social-networks-FB" src="img/FB.png" alt="icon"></a>
+				      </li>
+				  </ul>
+				  <span class="menu-page__copyright"> Aesthetic objects 2020</span>
+			    </nav>
+			</div>
 			<div class="overlay"></div>
 		    <div class="sidebar">
 			    <div class="sidebar__header">
@@ -33,14 +58,14 @@
 				       <li><a href="blog.html">блог</a></li>
 				       <li><a href="contacts.html">контакты</a></li>
 				    </ul>
-				    <a class="cart close-cart">
+				    <div class="cart close-cart">
 				      <span class="cart__counter">1</span>
-				    </a> 
+				    </div> 
 				    <div class="menu-button"></div>
 			    </nav>
 			    </div>
 			    <div class="sidebar__main">
-			    <div class="sidebar__product-in-cart">
+			       <div class="sidebar__product-in-cart">
 					<button class="sidebar__product-remove"></button>
 					<div class="sidebar__product-img"></div>
 					<div class="sidebar__product-properties">
@@ -59,8 +84,8 @@
 						</div>
 						<h3 class="sidebar__product-final-cost">1233p</h3>
 					</div>
-				</div>
-				<div class="sidebar__product-in-cart">
+				   </div>
+				   <div class="sidebar__product-in-cart">
 					<button class="sidebar__product-remove"></button>
 					<div class="sidebar__product-img"></div>
 					<div class="sidebar__product-properties">
