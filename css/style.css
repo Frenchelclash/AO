@@ -81,6 +81,7 @@ select, textarea, input{
 	z-index: 2;
 	background-color: black;
 	opacity: 50%;
+	 -webkit-filter: opacity(50%);
 }
 .menu-page{
 	display: none;
