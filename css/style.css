@@ -1777,8 +1777,12 @@ select:focus{
 
 	body{
 		font-size: 2.8vw;
-}
+    }
 
+    input[type="number"]{
+    	background-color: transparent;
+    	border-radius: 0;
+    }
 	/*menu*/
 
 	.menu-page {
@@ -1797,7 +1801,7 @@ select:focus{
     } 
 
     .menu-page__menu {
-    	padding:43vw 28.8vw 11vw;
+    	padding:40vw 28.8vw 11vw;
     	display: -webkit-box;
     	display: -ms-flexbox;
     	display: flex;
@@ -1821,7 +1825,7 @@ select:focus{
     	-webkit-box-align: center;
     	    -ms-flex-align: center;
     	        align-items: center;
-    	margin-bottom: 43vw;
+    	margin-bottom: 38vw;
     }
 
     .menu-page__menu-links li a{
@@ -1848,7 +1852,7 @@ select:focus{
     }
 
     .menu-page__copyright {
-    	font-size: 3.7vw;
+    	font-size: 3vw;
     }
 
 	/*sidebar*/
@@ -2120,7 +2124,7 @@ select:focus{
 
     }
      .about__text {
-     	max-height: 20vw;
+     	max-height: 22.3vw;
      	overflow: auto;
      	overflow: -moz-scrollbars-none;
 	    -ms-overflow-style: none;
@@ -2151,9 +2155,7 @@ select:focus{
      	margin-bottom: 6vw;
 
     }
-     .subscription-form__email-input__label{
 
-    }
     .label{
     	padding: 1vw;
     	height: 3vw;
@@ -2163,6 +2165,7 @@ select:focus{
      .subscription-form__email-input{
      	width: 93.9vw;
      	height: 9vw;
+     	font-size: 2.3vw
 
     }
 
@@ -2246,7 +2249,7 @@ select:focus{
 
     .filter-section__options li{
     	font-size: 3.7vw;
-    	margin: 0 4vw 5vw 0;
+    	margin: 0 7.5vw 5vw 0;
     }
 
     /*blog*/
