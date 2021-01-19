@@ -68,6 +68,10 @@ select, textarea, input{
 	border-radius: 0;
 	border: 1px solid lightgrey;
 }
+input[type="checkbox"]{
+	-webkit-appearance: auto;
+	-moz-appearance: auto;
+}
 
 .wrapper {
 	width: 100%;
