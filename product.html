@@ -157,7 +157,11 @@
 							<li >Georgian people</li>
 						</ul>
 						<fieldset class="features__select">
-							<input type="number" min="1" autocomplete="1" class="features__quantity select-input">
+							<div class="features__quantity-block">
+                               <button class="features__quantity-arrow-minus"> - </button>
+                               <input class="features__quantity-num" type="number" value="1" />
+                               <button class="features__quantity-arrow-plus"> + </button>
+                            </div>
 							<select name="size" id="" class="features__size select-input">
 								<option value="30 см">30 см</option>	
 								<option value="15 см">15 см</option>
@@ -295,6 +299,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

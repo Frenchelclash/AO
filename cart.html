@@ -145,7 +145,7 @@
 						<div class="product-in-cart__quantity-price">
 							<div class="quantity-block">
 						        <button class="quantity-arrow-minus"> - </button>
-						        <input class="quantity-num" type="number" value="1" />
+						        <input class="quantity-num" type="number"  />
 						        <button class="quantity-arrow-plus"> + </button>
 						    </div>
 						    <div class="product-in-cart__multiply">&#215;</div>
@@ -163,13 +163,13 @@
 					</div>
 					<div class="product-in-cart__cost">
 						<div class="product-in-cart__quantity-price">
-							<div class="quantity-block">
-						        <button class="quantity-arrow-minus"> - </button>
-						        <input class="quantity-num" type="number" value="1" />
-						        <button class="quantity-arrow-plus"> + </button>
-						    </div>
+						  <div class="quantity-block">
+                             <button class="quantity-arrow-minus"> - </button>
+                             <input class="quantity-num" type="number" value="1" />
+                             <button class="quantity-arrow-plus"> + </button>
+                           </div>
 						    <div class="product-in-cart__multiply">&#215;</div>
-						    <h3 class="product-in-cart__price"></h3>
+						    <h3 class="product-in-cart__price">1233p</h3>
 						</div>
 						<h3 class="product-in-cart__final-cost"></h3>
 					</div>
@@ -231,14 +231,14 @@
                                 placeholder="+7(___)___-__-__" class="payment-form__input input">
 					    	</div>
 					    	<div class="payment-form__input-wrapper input-wrapper">
-					    	    <label for="fio" class="payment-form__label label">Почта</label>
+					    	    <label for="email" class="payment-form__label label">Почта</label>
 					    	    <input type="email" name="email" placeholder=" Ivanov2000@mail.ru" class="payment-form__input input">
 					    	</div>
 					</fieldset>
 					<fieldset class="payment-form__payment-method">
 						 <div class=" .payment-form__input-wrapper input-wrapper">
 				    	       <label class="payment-form__label label" for="payment_method">Способ оплаты</label>
-				    	       <select class="payment-form__input input" name="payment_method" id="">
+				    	       <select class="payment-form__input input" name="payment_method">
 				    		      <option value="">Банковская карта</option>
 				    	       </select>
 				    	    </div>
@@ -276,6 +276,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
