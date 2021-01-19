@@ -62,7 +62,7 @@ fieldset{
     padding: 0;
 }
 
-select, textarea{
+select, textarea, input{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	border-radius: 0;
@@ -1774,7 +1774,7 @@ select:focus{
 }
 
 @media screen and (max-width: 414px){
-	
+
 	body{
 		font-size: 2.8vw;
 }
