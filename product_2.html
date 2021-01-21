@@ -22,7 +22,7 @@
 				<div class="menu-button open-menu"></div>
 			</nav>
 		</header>
-		<main class="cart-main">
+		<main class="product-main">
 			<div class="menu-page">
 				<div class="header">
 			       <a href="index.html" class="logo"></a>
@@ -49,7 +49,7 @@
 			    </nav>
 			</div>
 			<div class="overlay"></div>
-		   <div class="sidebar">
+		    <div class="sidebar">
 			    <div class="sidebar__header">
 				   <nav class="sidebar__menu">
 				     <ul class="sidebar__menu-links">
@@ -130,127 +130,153 @@
 			    	<a href="cart.html" class="sidebar__go-to-cart">Перейти в корзину</a>
 			   </div>
 		    </div>
-			<section class="cart-section">
-				<div class="product-in-cart">
-					<button class="product-in-cart__remove"></button>
-					<div class="product-in-cart__img"></div>
-					<div class="product-in-cart__properties">
-						<h2 class="product-in-cart__heading heading__h2">Необычный стул</h2>
-						<h3 class="product-in-cart__heading__h3">Red</h3>
+			<section class="product">
+				<div class="product__album">
+					<div class="product__img P1"></div>
+					<div class="product__img P2"></div>
+					<div class="product__img P3"></div>
+					<div class="product__img IMG1"></div>
+					<div class="product__img P2"></div>
+				</div>
+				<section class="properties">
+					<div class="properties__description">
+						<div class="properties__headings">
+							 <h1 class="properties__heading heading__h1">Необычный стул</h1>
+					         <h2 class="properties_price heading__h2">3 750р</h2>
+						</div>
+					    <p class="properties__text">Dali is a hunting goddess from the mythology of the Georgian people. The patron of hoofed wild mountain animals, she was said to reward. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, praesentium labore, dignissimos eos ad doloremque voluptatum cum totam voluptate animi blanditiis inventore rerum, nulla dolorem quisquam soluta eaque nostrum. Reiciendis.
+					    </p>
 					</div>
-					<div class="product-in-cart__cost">
-						<div class="product-in-cart__quantity-price">
-							<div class="quantity-block">
-						        <button class="quantity-arrow-minus"> - </button>
-						        <input class="quantity-num" type="number"  />
-						        <button class="quantity-arrow-plus"> + </button>
+					<div class="features">
+						<ul class="features__list">
+							<li>Dali is a hunting</li>
+							<li>With golden hair</li> <li>Glowing skin</li>
+							<li >Georgian people</li>
+						</ul>
+						<fieldset class="features__select">
+							<div class="features__quantity-block">
+                               <button class="features__quantity-arrow-minus"> - </button>
+                               <input class="features__quantity-num" type="number" value="1" />
+                               <button class="features__quantity-arrow-plus"> + </button>
+                            </div>
+							<select name="size" id="" class="features__size select-input">
+								<option value="30 см">30 см</option>	
+								<option value="15 см">15 см</option>
+							</select>
+							<select name="color" id="" class="features__color select-input">
+								<option value="красный">Красный</option>	
+								<option value="синий">Синий</option>
+							</select>
+						</fieldset>
+					</div>
+					<button class="product__add-to-cart">Добавить в корзину</button>
+				</section>
+				</section>
+				<section class="rec-section">
+					<h1 class="rec-section__heading heading__h1">
+						Рекомендованные товары
+					</h1>
+					<div class="rec-cards">
+						<div class="rec-cards__product-card  P1">
+							<h3 class="rec-cards__heading heading__h3">Стул</h3>
+						</div>
+						<div class="rec-cards__product-card  P2">
+							<h3 class="rec-cards__heading heading__h3">Стул</h3>
+						</div>
+						<div class="rec-cards__product-card  P3">
+							<h3 class="rec-cards__heading heading__h3">Стул</h3>
+						</div>
+						<div class="rec-cards__product-card  IMG1">
+							<h3 class="rec-cards__heading heading__h3">Стул</h3>
+						</div>
+					</div>
+				</section>
+				<div class="overlay"></div>
+		    <div class="sidebar">
+			    <div class="sidebar__header">
+				<nav class="header__menu">
+				   <ul class="header__menu-links">
+				       <li><a href="catalog.html">каталог</a></li>
+				       <li><a href="blog.html">блог</a></li>
+				       <li><a href="contacts.html">контакты</a></li>
+				    </ul>
+				    <a class="cart close-cart">
+				      <span class="cart__counter">1</span>
+				    </a> 
+				    <div class="menu-button"></div>
+			    </nav>
+			    </div>
+			    <div class="sidebar__main">
+			    <div class="sidebar__product-in-cart">
+					<button class="sidebar__product-remove"></button>
+					<div class="sidebar__product-img"></div>
+					<div class="sidebar__product-properties">
+						<h2 class="sidebar__product-heading">Необычный стул</h2>
+						<h3 class="sidebar__product-heading__h3">Red</h3>
+					</div>
+					<div class="sidebar__product-cost">
+						<div class="sidebar__product-quantity-price">
+							<div class="sidebar__quantity-block">
+						        <button class="sidebar__quantity-arrow-minus"> - </button>
+						        <input class="sidebar__quantity-num" type="number" value="1" />
+						        <button class="sidebar__quantity-arrow-plus"> + </button>
 						    </div>
-						    <div class="product-in-cart__multiply">&#215;</div>
-						    <h3 class="product-in-cart__price">1233p</h3>
+						    <div class="sidebar__product-multiply">&#215;</div>
+						    <h3 class="sidebar__product-price">1233p</h3>
 						</div>
+						<h3 class="sidebar__product-final-cost">1233p</h3>
 					</div>
 				</div>
-				<div class="product-in-cart">
-					<button class="product-in-cart__remove"></button>
-					<div class="product-in-cart__img"></div>
-					<div class="product-in-cart__properties">
-						<h2 class="product-in-cart__heading heading__h2">Необычный стул</h2>
-						<h3 class="product-in-cart__heading__h3">Red</h3>
+				<div class="sidebar__product-in-cart">
+					<button class="sidebar__product-remove"></button>
+					<div class="sidebar__product-img"></div>
+					<div class="sidebar__product-properties">
+						<h2 class="sidebar__product-heading">Необычный стул</h2>
+						<h3 class="sidebar__product-heading__h3">Red</h3>
 					</div>
-					<div class="product-in-cart__cost">
-						<div class="product-in-cart__quantity-price">
-						  <div class="quantity-block">
-                             <button class="quantity-arrow-minus"> - </button>
-                             <input class="quantity-num" type="number" value="1" />
-                             <button class="quantity-arrow-plus"> + </button>
-                           </div>
-						    <div class="product-in-cart__multiply">&#215;</div>
-						    <h3 class="product-in-cart__price">1233p</h3>
-						</div>
-					</div>
-				</div>
-				<div class="product-in-cart">
-					<button class="product-in-cart__remove"></button>
-					<div class="product-in-cart__img"></div>
-					<div class="product-in-cart__properties">
-						<h2 class="product-in-cart__heading heading__h2">Необычный стул</h2>
-						<h3 class="product-in-cart__heading__h3">Red</h3>
-					</div>
-					<div class="product-in-cart__cost">
-						<div class="product-in-cart__quantity-price">
-							<div class="quantity-block">
-						        <button class="quantity-arrow-minus"> - </button>
-						        <input class="quantity-num" type="number" value="1" />
-						        <button class="quantity-arrow-plus"> + </button>
+					<div class="sidebar__product-cost">
+						<div class="sidebar__product-quantity-price">
+							<div class="sidebar__quantity-block">
+						        <button class="sidebar__quantity-arrow-minus"> - </button>
+						        <input class="sidebar__quantity-num" type="number" value="1" />
+						        <button class="sidebar__quantity-arrow-plus"> + </button>
 						    </div>
-						    <div class="product-in-cart__multiply">&#215;</div>
-						    <h3 class="product-in-cart__price">1233p</h3>
+						    <div class="sidebar__product-multiply">&#215;</div>
+						    <h3 class="sidebar__product-price">1233p</h3>
 						</div>
+						<h3 class="sidebar__product-final-cost">1233p</h3>
 					</div>
 				</div>
-			</section>
-			<section class="overall">
-				<div class="overall__cost">
-					<h2 class="overall__heading heading__h2">Всего: </h2>
-					<span class="overall__number heading__h2">112020</span>
-				</div>
-				<div class="delivery">
-					<h2 class="delivery__heading heading__h2">Доставка (Россия):</h2>
-					<span class="delivery__cost heading__h2"> 500 р</span>
-				</div>
-				<!--<button class="delivery__change">Сменить</button>-->
-			</section>
-			<section class="payment">
-				<form  class="payment-form">
-					<fielset class="discount">
-					   <div class="discount__input-wrapper input-wrapper">
-						    <label for="discount" class="discount__label label">Код купона</label>
-						    <input type="text" name="discount" placeholder="23567437922" class="discount__input input">
-					   </div>
-					   <input class="discount__submit-input" type="submit" value="Подтвердить">
-				    </fielset>
-					<h1 class="payment-form__heading">Данные для оплаты</h1>
-					<fieldset class="payment-form__personal-info">
-						   <div class="payment-form__input-wrapper input-wrapper">
-							     <label for="fio" class="payment-form__label label">Имя получателя</label>
-					    	     <input type="text" name="fio" placeholder="Иван Иванов" class="payment-form__input input">
-					    	</div>
-					    	<div class="payment-form__input-wrapper input-wrapper">
-					    		<label for="adress" class="payment-form__label label">Адрес</label>
-					    	    <input type="text" name="adress" placeholder="г Москва  ул Строителей  д 22  кв 1 " class="payment-form__input input">
-					    	</div>
-					    	<div class="payment-form__input-wrapper input-wrapper">
-					    	    <label for="phone_number" class="payment-form__label label">Телефон</label>
-					    	    <input type="tel" name="phone_number" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                                placeholder="+7(___)___-__-__" class="payment-form__input input">
-					    	</div>
-					    	<div class="payment-form__input-wrapper input-wrapper">
-					    	    <label for="email" class="payment-form__label label">Почта</label>
-					    	    <input type="email" name="email" placeholder=" Ivanov2000@mail.ru" class="payment-form__input input">
-					    	</div>
-					</fieldset>
-					<fieldset class="payment-form__payment-method">
-						 <div class=" .payment-form__input-wrapper input-wrapper">
-				    	       <label class="payment-form__label label" for="payment_method">Способ оплаты</label>
-				    	       <select class="payment-form__input input" name="payment_method">
-				    		      <option value="">Банковская карта</option>
-				    	       </select>
-				    	    </div>
-					</fieldset>
-					<div class="payment-form__overall">
-						<h1 class="payment-form__overall-heading heading__h1">Итого: </h1>
-						<span class="payment-form__overall heading__h1"></span>
+				<div class="sidebar__product-in-cart">
+					<button class="sidebar__product-remove"></button>
+					<div class="sidebar__product-img"></div>
+					<div class="sidebar__product-properties">
+						<h2 class="sidebar__product-heading">Необычный стул</h2>
+						<h3 class="sidebar__product-heading__h3">Red</h3>
 					</div>
-					<div class="payment-form__submit-section submit-section">
-				            <input  class="submit-section__submit-input submit-section__submit-input__cart"type="submit" value="Купить">
-		        	        <fieldset class="checkbox-section">
-		        		        <input  class="checkbox-section__checkbox" type="checkbox" required>
-		        		        <p  class="checkbox-section__checkbox-p">Я соглашаюсь с условиями обработки и использования моих персональных данных</p>
-		        	        </fieldset>
-			        </div>
-				</form>
-			</section>
-		</main>	
+					<div class="sidebar__product-cost">
+						<div class="sidebar__product-quantity-price">
+							<div class="sidebar__quantity-block">
+						        <button class="sidebar__quantity-arrow-minus"> - </button>
+						        <input class="sidebar__quantity-num" type="number" value="1" />
+						        <button class="sidebar__quantity-arrow-plus"> + </button>
+						    </div>
+						    <div class="sidebar__product-multiply">&#215;</div>
+						    <h3 class="sidebar__product-price">1233p</h3>
+						</div>
+						<h3 class="sidebar__product-final-cost">1233p</h3>
+					</div>
+				</div>
+			    </div>
+		        <div class="sidebar__footer">
+			    	<div class="sidebar__overall">
+			    		<h4 class="sidebar__overall-heading">Итого:</h4>
+			    	    <h4 class="sidebar__overall-count">2333</h4>
+			    	</div>
+			    	<a href="cart.html" class="sidebar__go-to-cart">Перейти в корзину</a>
+			   </div>
+		    </div>
+		</main>
 		<footer class="footer">
 			<nav class="footer__menu">
 				<ul class="footer__menu-links">
@@ -274,7 +300,3 @@
 	<script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-			
