@@ -2569,7 +2569,7 @@ select:focus{
     	display: -ms-flexbox;
     	display: flex;
     	color: white;
-    	opacity: 70%;
+    	opacity: 60%;
     	font-size: 5vw;
     	position: absolute;
     	top: 50%;
