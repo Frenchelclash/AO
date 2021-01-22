@@ -1,3 +1,5 @@
+/*cart*/
+
 const openCart = document.querySelector('.open-cart');
 const closeCart = document.querySelector('.close-cart');
 const sidebar = document.querySelector('.sidebar');
@@ -47,6 +49,8 @@ $(function() {
   })();
 });
 
+/*sidebar*/
+
 $(function() {
   (function quantityProducts() {
     var $quantityArrowMinusSide = $(".sidebar__quantity-arrow-minus");
@@ -68,6 +72,9 @@ $(function() {
     }
   })();
 });
+
+/*product*/
+
 $(function() {
   (function quantityProducts() {
     var $quantityArrowMinusProduct = $(".features__quantity-arrow-minus");
@@ -89,3 +96,37 @@ $(function() {
     }
   })();
 });
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+
+function showSlides(n) {
+     var i;
+  var slides = document.getElementsByClassName("product__img__mobile");
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+
+
+

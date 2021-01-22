@@ -131,17 +131,32 @@
 			   </div>
 		    </div>
 			<section class="product">
-				<div class="product__album-wrapper">
-					<div class="product__hider">
-				    <ul class="product__album">
-					<li class="product__album-cell P1"></li>
-					<li class="product__album-cell P2"></li>
-					<li class="product__album-cell P3"></li>
-					<li class="product__album-cell IMG1"></li>
-					<li class="product__album-cell P2"></li>
-				   </ul>
-				</div>
-				</div>
+				<div class="product__album">
+					   <div class="product__img IMG1"></div>
+					   <div class="product__img IMG2"></div>
+					   <div class="product__img IMG3"></div>
+					   <div class="product__img P1"></div>
+					   <div class="product__img P2"></div>
+				    </div>
+			    <div class="product__album-wrapper__mobile">
+			    	<div class="product__album__mobile">
+					   <div class="product__img__mobile fade IMG1"></div>
+					   <div class="product__img__mobile  fade IMG2"></div>
+					   <div class="product__img__mobile  fade IMG3"></div>
+					   <div class="product__img__mobile fade P1"></div>
+					   <div class="product__img__mobile  fade P2"></div>
+
+					   <a class="product__prev" onclick="plusSlides(-1)">&#10094;</a>
+					   <a class="product__next" onclick="plusSlides(1)">&#10095;</a>
+				    </div>
+				    <div class="product__dots">
+				    	<span class="dot" onclick="currentSlide(1)"></span>
+				    	<span class="dot" onclick="currentSlide(2)"></span>
+				    	<span class="dot" onclick="currentSlide(3)"></span>
+				    	<span class="dot" onclick="currentSlide(4)"></span>
+				    	<span class="dot" onclick="currentSlide(5)"></span>
+				    </div>
+			    </div>
 				<section class="properties">
 					<div class="properties__description">
 						<div class="properties__headings">

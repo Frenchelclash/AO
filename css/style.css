@@ -1271,6 +1271,10 @@ input[type="checkbox"]{
 	margin-bottom: 12.23vw;
 }
 
+.product__album-wrapper-mobile{
+	display: none;
+}
+
 .product__album {
 	width: 42vw;
 	height: 42vw;
@@ -1290,7 +1294,7 @@ input[type="checkbox"]{
 	background-color: #DDDDDD;
 }
 
-.product__album-cell {
+.product__img {
 	width: 100%;
 	height: 100%;
 	
@@ -2520,80 +2524,99 @@ select:focus{
     	    -ms-flex-direction: column;
     	        flex-direction: column;
     }
-
-    /*варианты альбомов*/
-
-   /* .product__album-wrapper{
-    	
-    	width: auto;
-        position: relative;
-    }
-
-    .product__album {
-
-    	width: auto;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .product__hider{
-    	max-width: 94vw;
-    	min-height: 94vw;
-    	overflow-y: hidden;
-    	overflow-x: scroll;
-    	
-    }
-
-    .product__album-cell{
-    	min-height: 94vw;
-    	max-width: 94vw;
-    	display: block;
-    	flex: 0 0 auto;
-    }
-
-    .product__album::-webkit-scrollbar {
-     width: 5px; }*/
-
-    .product__hider{
-    	overflow: hidden;
-    }
     .product__album{
+    	display: none;
+    }
+    .product__album-wrapper__mobile{
+    	display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+    	-webkit-box-orient: vertical;
+    	-webkit-box-direction: normal;
+    	    -ms-flex-direction: column;
+    	        flex-direction: column;
+    	margin-bottom:10vw; 
+    }
+
+    .product__album__mobile{
     	width: 94vw;
     	height: 94vw;
-    	margin-bottom: 17vw;
     	display: -webkit-box;
     	display: -ms-flexbox;
     	display: flex;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 3vw;
     }
 
-    .product__album::-webkit-scrollbar {
-     height: 6px; }
-
-
-    .product__album-cell{
-    	display: block;
+    .product__img__mobile{
+    	width: 100%;
+	    height: 100%;
+    	display: none;
     	-webkit-box-flex: 0;
     	    -ms-flex: 0 0 auto;
     	        flex: 0 0 auto;
     }
 
-    .properties__headings{
+    .product__next,.product__prev{
     	display: -webkit-box;
     	display: -ms-flexbox;
     	display: flex;
-    	-webkit-box-pack: justify;
-    	    -ms-flex-pack: justify;
-    	        justify-content: space-between;
-    	margin-bottom: 4vw;
+    	color: white;
+    	opacity: 70%;
+    	font-size: 10vw;
+    	position: absolute;
+    	top: 47%;
     }
 
+    .product__next{
+    	right: 1vw;
+    }
+
+    .product__dots{
+    	display: initial;
+    	margin: auto;
+    }
+
+    .dot{
+    	cursor: pointer;
+        height: 2vw;
+        width: 2vw;
+        margin: 0 1vw;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        -webkit-transition: background-color 0.6s ease;
+        -o-transition: background-color 0.6s ease;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+     background-color: #717171;
+    }
+
+    .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+   }
+
+   @-webkit-keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+  }
+
+    @keyframes fade {
+     from {opacity: .8}
+     to {opacity: 1}
+   }
+
+    .product__prev{
+    	left: 1vw;
+    }
 
     .properties {
     	width: 100%;
@@ -2604,6 +2627,19 @@ select:focus{
     	font-weight: 600;
     }
 
+    .properties__headings{
+    	display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+    	-webkit-box-orient: horizontal;
+    	-webkit-box-direction: normal;
+    	    -ms-flex-direction: row;
+    	        flex-direction: row;
+    	-webkit-box-pack: justify;
+    	    -ms-flex-pack: justify;
+    	        justify-content: space-between;
+    	margin-bottom: 3vw;
+    }
     .properties_price {
     	font-size: 4.9vw;
     	font-weight: 700;
