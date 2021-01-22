@@ -2570,13 +2570,17 @@ select:focus{
     	display: flex;
     	color: white;
     	opacity: 70%;
-    	font-size: 10vw;
+    	font-size: 5vw;
     	position: absolute;
-    	top: 47%;
+    	top: 50%;
     }
 
     .product__next{
-    	right: 1vw;
+    	right: 3vw;
+    }
+
+    .product__prev{
+    	left: 3vw;
     }
 
     .product__dots{
@@ -2616,10 +2620,6 @@ select:focus{
      from {opacity: .8}
      to {opacity: 1}
    }
-
-    .product__prev{
-    	left: 1vw;
-    }
 
     .properties {
     	width: 100%;
