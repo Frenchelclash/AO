@@ -1431,6 +1431,8 @@ select:focus{
 }
 
 .select-input {
+	background-color: transparent;
+	border-radius: 0;
 	border: 1px solid lightgrey;
 	height: 3.5vw;
 	display: -webkit-box;
@@ -2527,6 +2529,7 @@ select:focus{
     .product__album{
     	display: none;
     }
+
     .product__album-wrapper__mobile{
     	display: -webkit-box;
     	display: -ms-flexbox;
