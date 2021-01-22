@@ -1271,7 +1271,7 @@ input[type="checkbox"]{
 	margin-bottom: 12.23vw;
 }
 
-.product__album-wrapper-mobile{
+.product__album-wrapper__mobile{
 	display: none;
 }
 
