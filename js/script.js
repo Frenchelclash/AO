@@ -3,14 +3,23 @@ new Swiper('.recommend-section', {
    loop: true,
    simulateTouch: true,
    slidesPerView: 1.2,
-      spaceBetween: 10,
+  spaceBetween: 10,
    centeredSlides: true,
+
+    keyboard: {
+    enabled:true,
+    pageUpPageDown: true,
+    },
+    mousewheel: {
+    eventsTarget: '.recommend-section',
+    },
    breakpoints: {
     415: {
       slidesPerView: 2.5,
       spaceBetween: 20
-      }
-   }
+      },
+   },
+
 })
 
 /*cart*/
