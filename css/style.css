@@ -2551,7 +2551,6 @@ select:focus{
             -ms-flex-pack: start;
                 justify-content: flex-start;
         overflow: hidden;
-        position: relative;
         margin-bottom: 3vw;
     }
 
@@ -2568,23 +2567,15 @@ select:focus{
     	display: -webkit-box;
     	display: -ms-flexbox;
     	display: flex;
-    	color: white;
-    	opacity: 60%;
-    	font-size: 5vw;
-    	position: absolute;
-    	top: 50%;
-    }
-
-    .product__next{
-    	right: 3vw;
-    }
-
-    .product__prev{
-    	left: 3vw;
+    	color: #bbb;
+    	font-size: 4vw;
+    	margin: 0 4vw;
+   
     }
 
     .product__dots{
-    	display: initial;
+    	display: flex;
+    	align-items: center;
     	margin: auto;
     }
 
