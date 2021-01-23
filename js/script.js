@@ -1,5 +1,17 @@
 /*homepage*/
-
+new Swiper('.recommend-section', {
+   loop: true,
+   simulateTouch: true,
+   slidesPerView: 1.2,
+      spaceBetween: 10,
+   centeredSlides: true,
+   breakpoints: {
+    414: {
+      slidesPerView: 2.5,
+      spaceBetween: 20
+      }
+   }
+})
 
 /*cart*/
 
