@@ -443,15 +443,15 @@ input[type="checkbox"]{
 	margin-bottom: 2.3vw;
 }
 
-.recomend-section {
+.recommend-section {
 	max-width: 100vw;
 	position: relative;
 	
 }
-.carousel-hider{
+.carousel-container{
 	overflow: hidden;
 }
-.carousel {
+.carousel-slides {
 	width: auto;
 	list-style-type: none;
 	margin: 0;
@@ -464,19 +464,21 @@ input[type="checkbox"]{
             justify-content: center;
 }
 
-.carousel__cell {
+.carousel-cell {
 	width: 39vw;
-	height: 50.78vw;
+	height: 45vw;
 	margin-right: 1.9vw;
 	position: relative;
 	display: block;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-}
+
+    transition: all ease 1s;        
+    }
 
 .prev-button, .next-button{
-	height: 50.78vw;
+	height: 45vw;
 	width: 19.6vw;
 	position: absolute;
 	top: 0;
@@ -1271,7 +1273,7 @@ input[type="checkbox"]{
 	margin-bottom: 12.23vw;
 }
 
-.product__album {
+/*.product__album {
 	width: 42vw;
 	height: 42vw;
 	overflow: scroll;
@@ -1294,6 +1296,25 @@ input[type="checkbox"]{
 	width: 100%;
 	height: 100%;
 	
+}*/
+
+.image-slider{
+	width: 42vw;
+	height: 42vw;
+}
+
+.image-slider__slide{
+	width: 100%;
+	height: 100%;
+}
+.image-slider__image{
+	width: 100%;
+	height: 100%;
+}
+.swiper-pagination span{
+	width: 0.5vw;
+	height: 0.5vw;
+	background-color: grey;
 }
 .properties {
 	width: 42.18vw;
@@ -2522,6 +2543,7 @@ select:focus{
     	    -ms-flex-direction: column;
     	        flex-direction: column;
     }
+    /*
     .product__album{
     	width: 94vw;
     	height: 94vw;
@@ -2539,7 +2561,18 @@ select:focus{
 
     .product__album::-webkit-scrollbar{
     	height: 1vw;
+    }*/
+
+    .image-slider{
+    	width: 94vw;
+    	height: 94vw;
+    	margin-bottom:10vw;
     }
+    .swiper-pagination span{
+    	width: 1.2vw;
+    	height: 1.2vw;
+    }
+
 
     .properties {
     	width: 100%;

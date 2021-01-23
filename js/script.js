@@ -1,3 +1,6 @@
+/*homepage*/
+
+
 /*cart*/
 
 const openCart = document.querySelector('.open-cart');
@@ -74,6 +77,23 @@ $(function() {
 });
 
 /*product*/
+new Swiper('.image-slider', {
+   loop: true,
+   simulateTouch: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  keyboard: {
+    enabled:true,
+    pageUpPageDown: true,
+  },
+  mousewheel:{
+    eventsTarget: '.image-slider',
+  }
+
+}
+  );
 
 $(function() {
   (function quantityProducts() {
