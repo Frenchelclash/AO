@@ -16,7 +16,7 @@ new Swiper('.recommend-section', {
    breakpoints: {
     415: {
       slidesPerView: 2.5,
-      spaceBetween: 20
+      spaceBetween: 40
       },
    },
 
