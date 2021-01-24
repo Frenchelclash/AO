@@ -75,6 +75,9 @@ $(function() {
 
 /*sidebar*/
 
+
+
+/*
 $(function() {
   (function quantityProducts() {
     var $quantityArrowMinusSide = $(".sidebar__quantity-arrow-minus");
@@ -95,7 +98,7 @@ $(function() {
       $quantityNumSide.val(+$quantityNumSide.val() + 1);
     }
   })();
-});
+});*/
 
 /*product*/
 new Swiper('.image-slider', {

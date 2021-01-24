@@ -70,16 +70,30 @@ input[type="checkbox"]{
 }
 
 .overlay{
-	display: none;
+	opacity: 0;
+	visibility: hidden;
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100vw;
 	height: 100vw;
 	z-index: 2;
-	background-color: black;
-	opacity: 50%;
-	 -webkit-filter: opacity(50%);
+	background-color: rgba(0, 0, 0, 0.8);
+
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0;
+
+}
+
+.overlay.open{
+	opacity: 1;
+	visibility: visible;
+}
+
+.overlay.open .sidebar{
+	transform: translate(0px,0px);
+	opacity: 1;
 }
 .menu-page{
 	display: none;
@@ -88,7 +102,7 @@ input[type="checkbox"]{
 /*sidebar*/
 
 .sidebar {
-	display: none;
+	opacity: 100%;
 	z-index: 3;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -101,6 +115,10 @@ input[type="checkbox"]{
 	max-height: none!important;
 	max-width: 32vw;
 	background-color: white;
+
+	transition: all 0.8s ease 0;
+	opacity: 0;
+	transform: translate(100%, 0px);
 
 }
 
@@ -139,11 +157,8 @@ input[type="checkbox"]{
 }
 
 .sidebar__main {
-	in-height: 28vw;
-	overflow-y: auto;
+	min-height: 28vw;
 	padding: 0 3.2vw 10vw;
-	overflow: -moz-scrollbars-none;
-	-ms-overflow-style: none;
 }
 
 .sidebar__main::-webkit-scrollbar { width: 0; }
@@ -431,7 +446,16 @@ input[type="checkbox"]{
 }
 
 /*homepage*/
-
+@keyframes recommend-section-link-animation{
+	from{
+		transform: translate(0px, 100%) ;
+		opacity: 0;
+	}
+	to{
+		transform: translate(0px, 0px) ;
+		opacity: 1;
+	}
+}
 .video-section {
 	width: 100%;
 	height: 46.875vw;
@@ -456,7 +480,15 @@ input[type="checkbox"]{
 	display: block;       
     }
 
+.recommend-section__slide:hover .recommend-section__link{
+	animation: recommend-section-link-animation 1s forwards;
+	
+}
+
 .recommend-section__link {
+	opacity: 0;
+	transition: all 0.8s ease 0;
+
 	height: 3.7vw;
 	width: 15.2vw;
 	background-color: white;
@@ -472,7 +504,7 @@ input[type="checkbox"]{
 	        justify-content: space-between;
 	position: absolute;
 	bottom: 4vw;
-	left: 12vw;
+	left: 11vw;
 }
 
 .recommend-section__img {

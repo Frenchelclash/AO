@@ -15,9 +15,9 @@
 				   <li><a href="catalog.html">каталог</a></li>
 				   <li><a href="blog.html">блог</a></li>
 				   <li><a href="contacts.html">контакты</a></li>
-				   <li>	<div class="cart open-cart">
+				   <li>	<a href="#siderbar-cart" class="cart open-popup">
 				    <span class="cart__counter">1</span>
-				</div> </li>
+				</a> </li>
 				</ul>
 				<div class="menu-button open-menu"></div>
 			</nav>
@@ -48,16 +48,16 @@
 				  <span class="menu-page__copyright"> Aesthetic objects 2020</span>
 			    </nav>
 			</div>
-			<div class="overlay"></div>
-		   <div class="sidebar">
+			<div class="overlay popup-link" id="siderbar-cart">
+				  <div class="sidebar">
 			    <div class="sidebar__header">
 				   <nav class="sidebar__menu">
 				     <ul class="sidebar__menu-links">
-				         <link><a href="catalog.html">каталог</a></li>
+				         <li><a href="catalog.html">каталог</a></li>
 				         <li><a href="blog.html">блог</a></li>
 				         <li><a href="contacts.html">контакты</a></li>
 				         <li>
-				         <div class="cart close-cart">
+				         <div class="cart close-popup">
 				         <span class="cart__counter">1</span>
 				         </div>
 				         </li>
@@ -130,6 +130,8 @@
 			    	<a href="cart.html" class="sidebar__go-to-cart">Перейти в корзину</a>
 			   </div>
 		    </div>
+			</div>
+		 
 			<section class="cart-section">
 				<div class="product-in-cart">
 					<button class="product-in-cart__remove"></button>
