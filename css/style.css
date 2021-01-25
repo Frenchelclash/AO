@@ -525,16 +525,24 @@ body.lock{
     }
 
 .recommend-section__slide:hover .recommend-section__link{
-	-webkit-animation: recommend-section-link-animation 1s forwards;
-	        animation: recommend-section-link-animation 1s forwards;
+	-webkit-animation: recommend-section-link-animation .3s forwards;
+	        animation: recommend-section-link-animation .3s forwards;
+	        -webkit-overflow-scrolling:touch;
+            -webkit-transform: translate3d(0, 0, 0);
+            -webkit-transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
 	
 }
 
 .recommend-section__link {
+	-webkit-overflow-scrolling:touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 	opacity: 0;
-	-webkit-transition: all 0.8s ease 0;
-	-o-transition: all 0.8s ease 0;
-	transition: all 0.8s ease 0;
+	-webkit-transition: all 0.3s ease 0;
+	-o-transition: all 0.3s ease 0;
+	transition: all 0.3s ease 0;
 
 	height: 3.7vw;
 	width: 15.2vw;
@@ -558,6 +566,7 @@ body.lock{
 	width: 3vw;
 	height: 3vw;
 	background-color: #0b1d77;
+
 }
 
 .heading__h3 {
@@ -595,6 +604,12 @@ body.lock{
 	position: relative;
 	background-size: cover;
 	background-position: center;
+	opacity: 0.87;
+}
+.catalog__product-card:hover{
+  opacity: 1;
+  transition: all 0.5s ease 0s;
+
 }
 
 .P1{
