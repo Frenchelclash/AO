@@ -5,31 +5,32 @@
 	<meta name="viewport" content="width=device-width, intial-scale=1">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
+	<header  id="header" class="header">
 			<a href="index.html" class="logo"></a>
 			<nav class="header__menu">
 				<ul class="header__menu-links">
-				   <li><a href="catalog.html">каталог</a></li>
-				   <li><a href="blog.html">блог</a></li>
-				   <li><a href="contacts.html">контакты</a></li>
-				   <li>	<div class="cart open-cart">
+				   <li class="header__menu-link"><a href="catalog.html">каталог</a></li>
+				   <li class="header__menu-link"><a href="blog.html">блог</a></li>
+				   <li class="header__menu-link"><a href="contacts.html">контакты</a></li>
+				   <li>	<a href="#popup" class="cart open-popup popup-link">
 				    <span class="cart__counter">1</span>
-				</div> </li>
+				</a> </li>
 				</ul>
 				<div class="menu-button open-menu"></div>
 			</nav>
-		</header>
-		<main class="contacts-main">
-			<div class="menu-page">
+	</header>
+	<main class="contacts-main">
+            <div class="menu-page">
 				<div class="header">
 			       <a href="index.html" class="logo"></a>
 			       <div class="header__menu">
-				      <div class="cart open-cart">
+				      <a class="cart  open-cart">
 				        <span class="cart__counter">1</span>
-				      </div> 
+				      </a> 
 				      <div class="menu-button close-menu"></div>
 			        </div>
 		        </div>
@@ -48,94 +49,94 @@
 				  <span class="menu-page__copyright"> Aesthetic objects 2020</span>
 			    </nav>
 			</div>
-			<div class="overlay"></div>
-		    <div class="sidebar">
-			   <div class="sidebar__header">
-				   <nav class="sidebar__menu">
-				     <ul class="sidebar__menu-links">
-				         <li><a href="catalog.html">каталог</a></li>
-				         <li><a href="blog.html">блог</a></li>
-				         <li><a href="contacts.html">контакты</a></li>
-				         <li>
-				         <div class="cart close-cart">
-				         <span class="cart__counter">1</span>
-				         </div>
-				         </li>
-				      </ul>
-				       
-				    <div class="menu-button"></div>
-			       </nav>
-			    </div>
-			    <div class="sidebar__main">
-			       <div class="sidebar__product-in-cart">
-					  <button class="sidebar__product-remove"></button>
-					  <div class="sidebar__product-img"></div>
-					  <div class="sidebar__product-properties">
-						<h2 class="sidebar__product-heading">Необычный стул</h2>
-						<h3 class="sidebar__product-heading__h3">Red</h3>
-					  </div>
-					  <div class="sidebar__product-cost">
-						<div class="sidebar__product-quantity-price">
-							<div class="sidebar__quantity-block">
-						        <button class="sidebar__quantity-arrow-minus"> - </button>
-						        <input class="sidebar__quantity-num" type="number" value="1" />
-						        <button class="sidebar__quantity-arrow-plus"> + </button>
-						    </div>
-						    <div class="sidebar__product-multiply">&#215;</div>
-						    <h3 class="sidebar__product-price">1233p</h3>
-						</div></div>
-				   </div>
-				    <div class="sidebar__product-in-cart">
-					  <button class="sidebar__product-remove"></button>
-					  <div class="sidebar__product-img"></div>
-					  <div class="sidebar__product-properties">
-						<h2 class="sidebar__product-heading">Необычный стул</h2>
-						<h3 class="sidebar__product-heading__h3">Red</h3>
-					  </div>
-					  <div class="sidebar__product-cost">
-						<div class="sidebar__product-quantity-price">
-							<div class="sidebar__quantity-block">
-						        <button class="sidebar__quantity-arrow-minus"> - </button>
-						        <input class="sidebar__quantity-num" type="number" value="1" />
-						        <button class="sidebar__quantity-arrow-plus"> + </button>
-						    </div>
-						    <div class="sidebar__product-multiply">&#215;</div>
-						    <h3 class="sidebar__product-price">1233p</h3>
-						</div></div>
-				   </div>
-					  <div class="sidebar__product-in-cart">
-					  <button class="sidebar__product-remove"></button>
-					  <div class="sidebar__product-img"></div>
-					  <div class="sidebar__product-properties">
-						<h2 class="sidebar__product-heading">Необычный стул</h2>
-						<h3 class="sidebar__product-heading__h3">Red</h3>
-					  </div>
-					  <div class="sidebar__product-cost">
-						<div class="sidebar__product-quantity-price">
-							<div class="sidebar__quantity-block">
-						        <button class="sidebar__quantity-arrow-minus"> - </button>
-						        <input class="sidebar__quantity-num" type="number" value="1" />
-						        <button class="sidebar__quantity-arrow-plus"> + </button>
-						    </div>
-						    <div class="sidebar__product-multiply">&#215;</div>
-						    <h3 class="sidebar__product-price">1233p</h3>
-						</div></div>
-				   </div>
+			<div class="popup" id="popup">
+				<div class="popup__body">
+			        <div class="sidebar popup__content">
+			            <div class="sidebar__header">
+				            <nav class="sidebar__menu">
+				                <ul class="sidebar__menu-links">
+				                    <li class="header__menu-link"><a href="catalog.html">каталог</a></li>
+				                    <li class="header__menu-link"><a href="blog.html">блог</a></li>
+				                    <li class="header__menu-link"><a href="contacts.html">контакты</a></li>
+				                    <li><a href="#header" class="cart close-popup">
+				                        <span class="cart__counter">1</span>
+				                    </a></li>
+				                </ul>
+				                <div class="menu-button"></div>
+			                </nav>
+			            </div>
+			            <div class="sidebar__main">
+			               <div class="sidebar__product-in-cart">
+					            <button class="sidebar__product-remove"></button>
+					            <div class="sidebar__product-img"></div>
+					            <div class="sidebar__product-properties">
+						          <h2 class="sidebar__product-heading">Необычный стул</h2>
+						          <h3 class="sidebar__product-heading__h3">Red</h3>
+					            </div>
+					            <div class="sidebar__product-cost">
+						          <div class="sidebar__product-quantity-price">
+							          <div class="sidebar__quantity-block">
+						                  <button class="sidebar__quantity-arrow-minus"> - </button>
+						                  <input class="sidebar__quantity-num" type="number" value="1" />
+						                  <button class="sidebar__quantity-arrow-plus"> + </button>
+						              </div>
+						              <div class="sidebar__product-multiply">&#215;</div>
+						              <h3 class="sidebar__product-price">1233p</h3>
+						          </div></div>
+				            </div>
+			               <div class="sidebar__product-in-cart">
+					            <button class="sidebar__product-remove"></button>
+					            <div class="sidebar__product-img"></div>
+					            <div class="sidebar__product-properties">
+						          <h2 class="sidebar__product-heading">Необычный стул</h2>
+						          <h3 class="sidebar__product-heading__h3">Red</h3>
+					            </div>
+					            <div class="sidebar__product-cost">
+						          <div class="sidebar__product-quantity-price">
+							          <div class="sidebar__quantity-block">
+						                  <button class="sidebar__quantity-arrow-minus"> - </button>
+						                  <input class="sidebar__quantity-num" type="number" value="1" />
+						                  <button class="sidebar__quantity-arrow-plus"> + </button>
+						              </div>
+						              <div class="sidebar__product-multiply">&#215;</div>
+						              <h3 class="sidebar__product-price">1233p</h3>
+						          </div></div>
+				            </div>
+			               <div class="sidebar__product-in-cart">
+					            <button class="sidebar__product-remove"></button>
+					            <div class="sidebar__product-img"></div>
+					            <div class="sidebar__product-properties">
+						          <h2 class="sidebar__product-heading">Необычный стул</h2>
+						          <h3 class="sidebar__product-heading__h3">Red</h3>
+					            </div>
+					            <div class="sidebar__product-cost">
+						          <div class="sidebar__product-quantity-price">
+							          <div class="sidebar__quantity-block">
+						                  <button class="sidebar__quantity-arrow-minus"> - </button>
+						                  <input class="sidebar__quantity-num" type="number" value="1" />
+						                  <button class="sidebar__quantity-arrow-plus"> + </button>
+						              </div>
+						              <div class="sidebar__product-multiply">&#215;</div>
+						              <h3 class="sidebar__product-price">1233p</h3>
+						          </div></div>
+				            </div>
+				        </div>
+		                 <div class="sidebar__footer">
+			    	         <div class="sidebar__overall">
+			    		         <h4 class="sidebar__overall-heading">Итого:</h4>
+			    	             <h4 class="sidebar__overall-count">2333</h4>
+			    	         </div>
+			    	         <a href="cart.html" class="sidebar__go-to-cart">Перейти в корзину</a>
+			            </div>
+		            </div>
 				</div>
-		        <div class="sidebar__footer">
-			    	<div class="sidebar__overall">
-			    		<h4 class="sidebar__overall-heading">Итого:</h4>
-			    	    <h4 class="sidebar__overall-count">2333</h4>
-			    	</div>
-			    	<a href="cart.html" class="sidebar__go-to-cart">Перейти в корзину</a>
-			   </div>
-		    </div>
+			</div>
 			<section class="contact-details-section">
 				<h1 class="contact-details__heading heading__h1">Контакты</h1>
 				<div class="contact-details">
 					<a class="contact-details__tel" href="tel:+7 (968) 188 58 35">Телефон для связи: +7 (968) 188-58-35</a>
 					<a class="contact-details__email" href="mailto:info@aestheticobjects.com">Почта: info@aestheticobjects.com</a>
-			        <span class="contact-details__adress">Адрес:</span>
+			        <!--<span class="contact-details__adress">Адрес:</span>-->
 			        <span class="contact-details__social-networks-span">Наши соц. сети:</span>
 			        <div class="contact-details__social-networks">
 			    	   <!--<a href=""><img class="contact-details__social-networks-YT" src="img/YTG.png" alt="icon"></a>-->
@@ -175,9 +176,8 @@
 		        		    <p  class="checkbox-section__checkbox-p">Я соглашаюсь с условиями обработки и использования моих персональных данных</p>
 		        	</fieldset>
 			</div>
-
-		</main>
-		<footer class="footer">
+	</main>
+	<footer class="footer">
 			<nav class="footer__menu">
 				<ul class="footer__menu-links">
 				  <li><a href="catalog.html">каталог</a></li>
@@ -194,9 +194,10 @@
     	            <a href=" https://web.facebook.com/groups/741611413089502"><img class="footer__social-networks-FB" src="img/FB.png" alt="icon"></a>
 				</div>
 			</div>
-		</footer>
+	</footer>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

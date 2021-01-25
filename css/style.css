@@ -59,6 +59,7 @@ fieldset{
 	-moz-appearance: none;
 	border-radius: 0;
 	border: 1px solid lightgrey;
+	outline-color: grey;
 }
 input[type="checkbox"]{
 	-webkit-appearance: auto;
@@ -69,7 +70,7 @@ input[type="checkbox"]{
 	width: 100%;
 }
 
-.overlay{
+.popup{
 	opacity: 0;
 	visibility: hidden;
 	position: fixed;
@@ -82,26 +83,33 @@ input[type="checkbox"]{
 
 	overflow-y: auto;
 	overflow-x: hidden;
+	-webkit-transition: all 0.8s ease 0;
+	-o-transition: all 0.8s ease 0;
 	transition: all 0.8s ease 0;
 
 }
 
-.overlay.open{
+.popup.open{
 	opacity: 1;
 	visibility: visible;
 }
 
-.overlay.open .sidebar{
-	transform: translate(0px,0px);
-	opacity: 1;
+.popup.open .popup__content{
+   opacity: 1;
+   -webkit-transform: translate(0px ,0px);
+       -ms-transform: translate(0px ,0px);
+           transform: translate(0px ,0px);
 }
 .menu-page{
 	display: none;
 }
 
 /*sidebar*/
+body.lock{
+	overflow: hidden;
+}
 
-.sidebar {
+.popup__content {
 	opacity: 100%;
 	z-index: 3;
 	-webkit-box-orient: vertical;
@@ -116,10 +124,15 @@ input[type="checkbox"]{
 	max-width: 32vw;
 	background-color: white;
 
-	transition: all 0.8s ease 0;
-	opacity: 0;
-	transform: translate(100%, 0px);
+	-webkit-transition: all 0.8s ease 0s;
 
+	-o-transition: all 0.8s ease 0s;
+
+	transition: all 0.8s ease 0s;
+    -webkit-transform: translate(100%, 0px);
+        -ms-transform: translate(100%, 0px);
+            transform: translate(100%, 0px);
+    opacity: 0;
 }
 
 .sidebar__header {
@@ -157,8 +170,9 @@ input[type="checkbox"]{
 }
 
 .sidebar__main {
-	min-height: 28vw;
+	max-height: 28vw;
 	padding: 0 3.2vw 10vw;
+	overflow-y: auto;
 }
 
 .sidebar__main::-webkit-scrollbar { width: 0; }
@@ -322,7 +336,8 @@ input[type="checkbox"]{
 
 .sidebar__quantity-num {
 	-moz-appearance: textfield;
-	width: 2.1vw;
+	min-width: 1vw;
+	max-width: 2.1vw;
 	height: 2vw;
 	padding: 0 .3vw;
 }
@@ -338,12 +353,18 @@ input[type="checkbox"]{
 }
 
 .sidebar__footer {
-	min-height: 9.32vw;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	max-height: 9.32vw;
+	width: 100%;
 	border-top: 1px solid lightgrey;
 	padding: 1.7vw 3.3vw 2vw;
+	background-color: white;
 }
 
 .sidebar__overall {
+
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -364,10 +385,17 @@ input[type="checkbox"]{
 	width: 12.5vw;
 	height: 3.48vw;
 	padding: 1vw 2vw;
-	border: 1px solid lightgrey;
+	border: 1px solid black;
 	color: black;
 }
 
+.sidebar__go-to-cart:hover{
+	background-color: black;
+	color: white;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
 /* header*/
 
 .header {
@@ -446,13 +474,29 @@ input[type="checkbox"]{
 }
 
 /*homepage*/
-@keyframes recommend-section-link-animation{
+
+@-webkit-keyframes recommend-section-link-animation{
 	from{
-		transform: translate(0px, 100%) ;
+		-webkit-transform: translate(0px, 100%) ;
+		        transform: translate(0px, 100%) ;
 		opacity: 0;
 	}
 	to{
-		transform: translate(0px, 0px) ;
+		-webkit-transform: translate(0px, 0px) ;
+		        transform: translate(0px, 0px) ;
+		opacity: 1;
+	}
+}
+
+@keyframes recommend-section-link-animation{
+	from{
+		-webkit-transform: translate(0px, 100%) ;
+		        transform: translate(0px, 100%) ;
+		opacity: 0;
+	}
+	to{
+		-webkit-transform: translate(0px, 0px) ;
+		        transform: translate(0px, 0px) ;
 		opacity: 1;
 	}
 }
@@ -481,12 +525,15 @@ input[type="checkbox"]{
     }
 
 .recommend-section__slide:hover .recommend-section__link{
-	animation: recommend-section-link-animation 1s forwards;
+	-webkit-animation: recommend-section-link-animation 1s forwards;
+	        animation: recommend-section-link-animation 1s forwards;
 	
 }
 
 .recommend-section__link {
 	opacity: 0;
+	-webkit-transition: all 0.8s ease 0;
+	-o-transition: all 0.8s ease 0;
 	transition: all 0.8s ease 0;
 
 	height: 3.7vw;
@@ -634,8 +681,9 @@ input[type="checkbox"]{
 .catalog-button {
 	width: 14.3vw;
 	height: 3vw;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
 	font-size: 0.9vw;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -648,6 +696,13 @@ input[type="checkbox"]{
 	        align-items: center;
 }
 
+.catalog-button:hover{
+	background-color: black;
+	color: white;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
 .subscription-form{
 	-ms-grid-column: 1;
 	    grid-column-start: 1;
@@ -1122,8 +1177,8 @@ input[type="checkbox"]{
 	-ms-grid-columns: 22.5vw 9.7vw 22.5vw;
 	grid-template-columns: repeat(2, 22.5vw);
 	grid-column-gap: 9.7vw;
-	-ms-grid-rows: 1.77vw 2vw 1.77vw 2vw 1.77vw;
-	grid-template-rows: repeat(3, 1.77vw);
+	-ms-grid-rows: 1.77vw 2vw 1.77vw;
+	grid-template-rows: repeat(2, 1.77vw);
 	grid-row-gap: 2vw;
 }
 
@@ -1459,10 +1514,18 @@ select:focus{
 	        align-items: center;
 	background-color: transparent;
 	border-radius: 0;
-	border:1px solid lightgrey;
+	border:1px solid black;
 	font-size: .83vw;
 
 }
+.product__add-to-cart:hover{
+	background-color: black;
+	color: white;
+	-webkit-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
 
 .rec-section__heading{
 	margin-bottom: 3.33vw;
@@ -1885,12 +1948,19 @@ select:focus{
     }
 
 	/*sidebar*/
-	.overlay{
+
+
+	.popup{
 		height: 100%;
 		opacity: 50%;
 	}
 
-	.sidebar {
+	.sidebar__menu-links{
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+	.popup__content {
 	   max-width: 78vw;
 	   background-color: white;
 	}
@@ -1903,10 +1973,6 @@ select:focus{
 	   -webkit-box-pack: end;
 	       -ms-flex-pack: end;
 	           justify-content: flex-end;
-    }
-
-    .sidebar__menu-links li a{
-    	display: none;
     }
 
     .sidebar__main {
@@ -1963,9 +2029,6 @@ select:focus{
     .sidebar__product-img {
 	  height: 24vw ;
 	  width: 24vw;
-    }
-
-    .sidebar__product-properties {
     }
 
     .sidebar__product-heading,
@@ -2039,9 +2102,16 @@ select:focus{
 		height: 8.8vw;
 		width: 8.8vw;
 	}
-	.header__menu-links li a{
+	.header__menu-link{
 		display: none;
 	}
+
+	.header__menu-links{
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+
 	
 	.cart {
 		width: 6.1vw;
