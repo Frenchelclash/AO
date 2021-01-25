@@ -2049,7 +2049,7 @@ select:focus{
     }
 
     .sidebar__quantity-num {
-	   width: 6vw;
+	   min-width: 6vw;
 	   height: 5.12vw;
 	   padding: 0 .8vw;
     }
