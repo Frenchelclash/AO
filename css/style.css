@@ -88,6 +88,8 @@ input[type="checkbox"]{
   visibility: hidden;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   z-index: 4;
 }
@@ -98,7 +100,9 @@ input[type="checkbox"]{
 
 .popup.open .popup__content{
   opacity: 1;
-  transform: translate(0px ,0px);
+  -webkit-transform: translate(0px ,0px);
+      -ms-transform: translate(0px ,0px);
+          transform: translate(0px ,0px);
 }
 .popup__area{
   position: absolute;
@@ -106,9 +110,15 @@ input[type="checkbox"]{
 
 .popup__body {
   min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   
 }
 
@@ -118,8 +128,12 @@ input[type="checkbox"]{
   max-width: 32vw;
   min-height: 100vh;
   position: relative;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-  transform: translate(100%, 0px);
+  -webkit-transform: translate(100%, 0px);
+      -ms-transform: translate(100%, 0px);
+          transform: translate(100%, 0px);
   opacity: 0;
   margin-left: calc(100vw - 32vw);
 }
@@ -594,6 +608,8 @@ input[type="checkbox"]{
 }
 .catalog__product-card:hover{
   opacity: 1;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 
 }
@@ -1244,8 +1260,12 @@ input[type="checkbox"]{
 
 .contact-details__social-networks {
 	width: 9vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	-ms-grid-column: 2;
 	    grid-column-start: 2;
 	-ms-grid-row: 2;
@@ -1921,6 +1941,8 @@ select:focus{
   		visibility: hidden;
   		overflow-y: auto;
   		overflow-x: hidden;
+  		-webkit-transition: all 0.8s ease 0s;
+  		-o-transition: all 0.8s ease 0s;
   		transition: all 0.8s ease 0s;
   		z-index: 4;
 
@@ -1939,9 +1961,15 @@ select:focus{
 
     .menu-popup__body {
      	min-height: 100%;
+   	  	display: -webkit-box;
+   	  	display: -ms-flexbox;
    	  	display: flex;
-  		justify-content: center;
-  		align-items: center;
+  		-webkit-box-pack: center;
+  		    -ms-flex-pack: center;
+  		        justify-content: center;
+  		-webkit-box-align: center;
+  		    -ms-flex-align: center;
+  		        align-items: center;
   
    }
 
@@ -1951,8 +1979,12 @@ select:focus{
   		color: black;
   		max-width: 800px;
   		position: relative;
+  		-webkit-transition: all 0.8s ease 0s;
+  		-o-transition: all 0.8s ease 0s;
   		transition: all 0.8s ease 0s;
-  		transform: translate(0px, -100%);
+  		-webkit-transform: translate(0px, -100%);
+  		    -ms-transform: translate(0px, -100%);
+  		        transform: translate(0px, -100%);
   		opacity: 0;
     }
 
