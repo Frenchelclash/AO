@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="wrapper">
-	<header  id="header" class="header">
+	<header  id="header" class="header lock-padding">
 			<a href="index.html" class="logo"></a>
 			<nav class="header__menu">
 				<ul class="header__menu-links">
@@ -20,34 +20,38 @@
 				    <span class="cart__counter">1</span>
 				</a> </li>
 				</ul>
-				<div class="menu-button open-menu"></div>
+				<a href="#menu-popup" class="menu-button open-menu-popup popup-link"></a>
 			</nav>
 	</header>
 	<main class="contacts-main">
-            <div class="menu-page">
-				<div class="header">
-			       <a href="index.html" class="logo"></a>
-			       <div class="header__menu">
-				      <a class="cart  open-cart">
-				        <span class="cart__counter">1</span>
-				      </a> 
-				      <div class="menu-button close-menu"></div>
-			        </div>
-		        </div>
-				<nav class="menu-page__menu">
-				  <ul class="menu-page__menu-links">
-				     <li><a href="catalog.html">каталог</a></li>
-				     <li><a href="blog.html">блог</a></li>
-				      <li><a href="contacts.html">контакты</a></li>
-				      <li class="menu-page__social-networks">
-					      <!--<a href=""><img class="YT" src="img/YTG.png" alt="icon"></a>-->
-    	                  <a href="https://t.me/aesthitic_objects"><img class="menu-page__social-networks-TG" src="img/TG.png" alt="icon"></a>
-    	                   <a href="https://www.instagram.com/aesthetic_objcts/"><img class="menu-page__social-networks-IG" src="img/IG.png" alt="icon"></a>
-    	                   <a href=" https://web.facebook.com/groups/741611413089502"><img class="menu-page__social-networks-FB" src="img/FB.png" alt="icon"></a>
-				      </li>
-				  </ul>
-				  <span class="menu-page__copyright"> Aesthetic objects 2020</span>
-			    </nav>
+           	<div class="menu-popup" id="menu-popup">
+				<div class="menu-popup__body">
+					<div class="menu-popup__content">
+						<div class="header menu-popup__header">
+						  	<a href="index.html" class="logo"></a>
+			             	<div class="header__menu">
+				      			<a class="cart">
+				        		<span class="cart__counter">1</span>
+				      			</a> 
+				      			<a href="#header" class="menu-button close-menu-popup"></a>
+			            	</div>
+					 	</div>
+						<nav class="menu-popup__menu">
+							<ul class="menu-popup__menu-links">
+								<li><a href="catalog.html">каталог</a></li>
+				     			<li><a href="blog.html">блог</a></li>
+				      			<li><a href="contacts.html">контакты</a></li>
+				      			<li class="menu-popup__social-networks">
+					      			<!--<a href=""><img class="YT" src="img/YTG.png" alt="icon"></a>-->
+    	                  			<a href="https://t.me/aesthitic_objects"><img class="menu-popup__social-networks-TG" src="img/TG.png" alt="icon"></a>
+    	                  		 	<a href="https://www.instagram.com/aesthetic_objcts/"><img class="menu-popup__social-networks-IG" src="img/IG.png" alt="icon"></a>
+    	                   			<a href=" https://web.facebook.com/groups/741611413089502"><img class="menu-popup__social-networks-FB" src="img/FB.png" alt="icon"></a>
+				            	</li>	
+							</ul>
+							<span class="menu-popup__copyright"> Aesthetic objects 2020</span>
+						</nav>
+					</div>
+				</div>
 			</div>
 			<div class="popup" id="popup">
 				<div class="popup__body">
@@ -134,15 +138,22 @@
 			<section class="contact-details-section">
 				<h1 class="contact-details__heading heading__h1">Контакты</h1>
 				<div class="contact-details">
-					<a class="contact-details__tel" href="tel:+7 (968) 188 58 35">Телефон для связи: +7 (968) 188-58-35</a>
-					<a class="contact-details__email" href="mailto:info@aestheticobjects.com">Почта: info@aestheticobjects.com</a>
+					<div class="contact-details__tel-wrapper">
+						<span class="contact-details__tel-span">Телефон для связи:</span>
+						<a class="contact-details__tel" href="tel:+7 (968) 188 58 35"> +7 (968) 188-58-35</a>
+					</div>
+					<div class="contact-details__email-wrapper">
+						<span class="contact-details__email-span">Почта:</span>
+						<a class="contact-details__email" href="mailto:info@aestheticobjects.com"> info@aestheticobjects.com</a>
+					</div>
+					
 			        <!--<span class="contact-details__adress">Адрес:</span>-->
 			        <span class="contact-details__social-networks-span">Наши соц. сети:</span>
 			        <div class="contact-details__social-networks">
 			    	   <!--<a href=""><img class="contact-details__social-networks-YT" src="img/YTG.png" alt="icon"></a>-->
-    	               <a href="https://t.me/aesthitic_objects"><img class="contact-details__social-networks-TG" src="img/TGG.png" alt="icon"></a>
-    	               <a href="https://www.instagram.com/aesthetic_objcts/"><img class="contact-details__social-networks-IG" src="img/IGG.png" alt="icon"></a>
-    	               <a href=" https://web.facebook.com/groups/741611413089502"><img class="contact-details__social-networks-FB" src="img/FBG.png" alt="icon"></a>
+    	               <a href="https://t.me/aesthitic_objects" class="contact-details__social-networks-TG"></a>
+    	               <a href="https://www.instagram.com/aesthetic_objcts/" class="contact-details__social-networks-IG"></a>
+    	               <a href=" https://web.facebook.com/groups/741611413089502" class="contact-details__social-networks-FB"></a>
 			        </div>
 				</div>
 			</section>

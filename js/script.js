@@ -22,35 +22,6 @@ new Swiper('.recommend-section', {
 
 })
 
-/*cart*/
-/*
-const openCart = document.querySelector('.open-cart');
-const closeCart = document.querySelector('.close-cart');
-const sidebar = document.querySelector('.sidebar');
-const overlay = document.querySelector('.overlay');
-
-openCart.addEventListener('click', function(){
-	sidebar.style.display = 'flex';
-	overlay.style.display = 'flex';
-})
-
-closeCart.addEventListener('click', function(){
-	sidebar.style.display = 'none';
-	overlay.style.display = 'none';
-})*/
-
-const openMenu = document.querySelector('.open-menu');
-const closeMenu = document.querySelector('.close-menu');
-const menu = document.querySelector('.menu-page');
-
-openMenu.addEventListener('click', function(){
-	menu.style.display = 'flex';
-})
-
-closeMenu.addEventListener('click', function(){
-	menu.style.display = 'none';
-})
-
 $(function() {
   (function quantityProducts() {
     var $quantityArrowMinus = $(".quantity-arrow-minus");
@@ -77,11 +48,11 @@ $(function() {
 
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
-//const lockPadding = document.querySelector(".lock-padding");
+const lockPadding = document.querySelector('.lock-padding');
 
 let unlock = true;
 
-const timeout = 800;
+const timeout =500;
 
 if (popupLinks.length > 0) {
   for (let index = 0; index < popupLinks.length; index++){
@@ -136,14 +107,14 @@ function popupClose(popupActive, doUnlock = true) {
 
 function bodyLock() {
   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-/*if( lockPadding.length > 0) {
+if( lockPadding.length > 0) {
    for (let index = 0; index < lockPaddingValue.length; index++) {
     const el = lockPadding[index];
     el.style.paddingRight = lockPaddingValue;
   }
-}*/
-  body.style.paddingRight = lockPaddingValue;
-  body.classList.add('lock');
+}
+  //body.style.paddingRight = lockPaddingValue;
+  //body.classList.add('lock');
 
   unlock = false;
   setTimeout(function(){
@@ -153,14 +124,14 @@ function bodyLock() {
 
 function bodyUnlock() {
   setTimeout(function() {
-  /*  if (lockPadding.length > 0) {
+    if (lockPadding.length > 0) {
       for (let index = 0; index < lockPadding.length; index++) {
         const el = lockPadding[index];
         el.style.paddingRight = '0px';
       }
-  }*/
-  body.style.paddingRight = '0px';
-  body.classList.remove('lock');
+  }
+ // body.style.paddingRight = '0px';
+  //body.classList.remove('lock');
 }, timeout);
 
   unlock = false;
@@ -199,7 +170,102 @@ $(function() {
   })();
 });
 
+/*menu-popup*/
 
+if (popupLinks.length > 0) {
+  for (let index = 0; index < popupLinks.length; index++){
+    const popupLink = popupLinks[index];
+    popupLink.addEventListener("click", function(e) {
+      const popupName = popupLink.getAttribute('href').replace('#', '');
+      const currentPopup = document.getElementById(popupName);
+      menuPopupOpen(currentPopup);
+      e.preventDefault();
+    });
+  }
+}
+  
+  const popupCloseMenuIcon = document.querySelectorAll('.close-menu-popup');
+if (popupCloseIcon.length > 0) {
+  for (let index = 0; index < popupCloseIcon.length; index++) {
+
+    const el = popupCloseMenuIcon[index];
+     el.addEventListener('click', function(e) {
+    menuPopupClose(el.closest('.menu-popup'));
+    e.preventDefault();
+  });
+ 
+  }
+}
+
+function menuPopupOpen(currentMenuPopup) {
+  if (currentMenuPopup && unlock) {
+    const menuPopupActive = document.querySelector('.menu-popup.open');
+    if (popupActive) {
+      menuPopupClose(menuPopupActive, false)
+    } else {
+      bodyLock();
+    }
+    currentMenuPopup.classList.add('open');
+    currentMenuPopup.addEventListener("click", function(e){
+      if(!e.target.closest('.menu-popup__content')) {
+        menuPopupClose(e.target.closest('.menu-popup'));
+      }
+    });
+  }
+}
+
+function menuPopupClose(popupActive, doUnlock = true) {
+  if(unlock) {
+    popupActive.classList.remove('open');
+    if(doUnlock){
+      bodyUnlock();
+    }
+  }
+}
+
+function bodyLock() {
+  const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+if( lockPadding.length > 0) {
+   for (let index = 0; index < lockPaddingValue.length; index++) {
+    const el = lockPadding[index];
+    el.style.paddingRight = lockPaddingValue;
+  }
+}
+  //body.style.paddingRight = lockPaddingValue;
+  //body.classList.add('lock');
+
+  unlock = false;
+  setTimeout(function(){
+    unlock = true;
+  }, timeout);
+}
+
+function bodyUnlock() {
+  setTimeout(function() {
+    if (lockPadding.length > 0) {
+      for (let index = 0; index < lockPadding.length; index++) {
+        const el = lockPadding[index];
+        el.style.paddingRight = '0px';
+      }
+  }
+ // body.style.paddingRight = '0px';
+  //body.classList.remove('lock');
+}, timeout);
+
+  unlock = false;
+  setTimeout(function (){
+    unlock = true;
+
+  }, timeout);
+}
+
+
+document.addEventListener('keydown', function(e) {
+  if(e.which === 27){
+    const menuPopupActive = document.querySelector('.menu-popup.open');
+    popupClose(popupActive);
+  }
+});
 /*product*/
 new Swiper('.image-slider', {
    loop: true,
