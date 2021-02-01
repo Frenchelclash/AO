@@ -2174,7 +2174,7 @@ select:focus{
     }
 
     .sidebar__footer {
-    	min-height: 27vw;
+    	min-height: 30%;
 	    padding: 2.7vw;
     }
 
