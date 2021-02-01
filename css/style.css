@@ -308,7 +308,9 @@ input[type="checkbox"]{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-bottom: .5vw;
 }
 
@@ -522,8 +524,12 @@ input[type="checkbox"]{
 	width: 40%;
 	height: 100%;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;       
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;       
     }
 .swiper-slide:nth-child(2n) {
       width: 50%;
