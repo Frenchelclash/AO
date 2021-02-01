@@ -1,9 +1,9 @@
 /*homepage*/
 new Swiper('.recommend-section', {
+  slidesPerView: 'auto',
    loop: true,
    simulateTouch: true,
-   slidesPerView: 1.2,
-  spaceBetween: 10,
+   spaceBetween: 5,
    centeredSlides: true,
 
     keyboard: {
@@ -15,8 +15,8 @@ new Swiper('.recommend-section', {
     },
    breakpoints: {
     415: {
-      slidesPerView: 2.5,
-      spaceBetween: 40
+      spaceBetween: 30,
+      slidesPerView: 'auto',
       },
    },
 
